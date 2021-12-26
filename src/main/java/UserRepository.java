@@ -56,6 +56,20 @@ public class UserRepository {
         return null;
     }
 
+    public boolean eliminarPerfil(User user){
+        boolean isUserDeleted = usuarios.remove(user);
+        if(!isUserDeleted){
+            System.out.println("El usuario que intenta eliminar no existe");
+            return false;
+        }else{
+            System.out.println("Usuario eliminado");
+            return true;
+        }
+    }
+
+
+
+
 
 
 }

@@ -85,7 +85,7 @@ public class AgendaApplication {
                 System.out.println("Ingresa tu clave ");
                 String clave2 = sc1.nextLine();
                 user = new User(usuraio2,clave2);
-                userRepository.eliminarUsuario(user);
+                userRepository.eliminarPerfil(user);
                 desplegarOpciones();
                 break;
             case 4:
