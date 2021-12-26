@@ -23,9 +23,7 @@ public class UserRepositoryTest {
     public void given_an_user_when_delete_then_return_true() {
         System.out.println("Test 1");
         User user = userRepository.buscarUsuario("david","arteaga");
-        boolean expected = true;
-        boolean actual = userRepository.eliminarPerfil(user);
-        assertEquals(expected, actual);
+        assertEquals(true, userRepository.eliminarPerfil(user));
     }
 
     @After

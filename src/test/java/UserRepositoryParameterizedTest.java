@@ -36,15 +36,19 @@ public class UserRepositoryParameterizedTest {
         userRepository = new UserRepository();
 
         //Primero creamos usuarios iniciales
+        ArrayList<User> users = new ArrayList<>();
         User user1 = new User("david","arteaga");
         User user2 = new User("andrea","123");
         User user3 = new User("carlos","password1");
         User user4 = new User("pepe","yosoyppee");
-        userRepository.guardarUsuario(user1);
-        userRepository.guardarUsuario(user2);
-        userRepository.guardarUsuario(user3);
-        userRepository.guardarUsuario(user4);
+        users.add(user1);
+        users.add(user2);
+        users.add(user3);
+        users.add(user4);
 
+        for(User user : users){
+            userRepository.guardarUsuario(user);
+        }
     }
 
     @Test
