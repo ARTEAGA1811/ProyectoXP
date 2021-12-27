@@ -70,15 +70,17 @@ public class UserRepository {
     }
 
     public boolean cambiarNombreUsuario(User user, String newName){
-
         user.setUsername(newName);
+        boolean temp = false;
         if(user.getUsername().equals(newName)){
             System.out.println("Nombre cambiado satisfactoriamente");
-            return true;
+            temp = true;
         }else {
-            return false;
+            System.out.println("El nombre no se ha podido cambiar");
+            temp = false;
 
         }
+        return temp;
     }
 
 

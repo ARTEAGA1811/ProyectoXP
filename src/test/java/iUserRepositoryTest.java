@@ -17,4 +17,31 @@ public class iUserRepositoryTest {
         assertEquals(true, usRep.eliminarPerfil(user));
     }
 
+    @Test
+    public void given_an_user_and_name_changeTheUsername_then_return_true(){
+
+        //Primero se crea un usuario
+        String usuario = "david";
+        String clave = "david1811";
+        User user = new User(usuario, clave);
+        String newUsername = "Mittsaker";
+        boolean temp = true;
+        iUserRepository usRep = Mockito.mock(iUserRepository.class);
+        Mockito.when(usRep.cambiarNombreDeUsuario(user, "Mittsaker")).thenReturn(temp);
+
+        assertTrue(usRep.cambiarNombreDeUsuario(user, newUsername));
+    }
+
+    @Test
+    public void given_an_user_and_EmptyName_changeTheUsername_then_return_false(){
+
+        //Primero se crea un usuario
+        User user = new User("david", "david1811");
+        String newUsername = "";
+        iUserRepository usRep = Mockito.mock(iUserRepository.class);
+        Mockito.when(usRep.cambiarNombreDeUsuario(user, "")).thenReturn(false);
+
+        assertFalse(usRep.cambiarNombreDeUsuario(user, newUsername));
+    }
+
 }
