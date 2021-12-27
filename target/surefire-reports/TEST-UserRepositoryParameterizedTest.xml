@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="4" failures="0" name="UserRepositoryParameterizedTest" time="0.005" errors="0" skipped="0">
+<testsuite tests="4" failures="0" name="UserRepositoryParameterizedTest" time="0.011" errors="0" skipped="0">
   <properties>
     <property name="idea.version" value="2021.2.3"/>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
@@ -64,8 +64,8 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="UserRepositoryParameterizedTest" name="given_parameters_when_deleteUser_then_return_false[0]" time="0.004"/>
+  <testcase classname="UserRepositoryParameterizedTest" name="given_parameters_when_deleteUser_then_return_false[0]" time="0.008"/>
   <testcase classname="UserRepositoryParameterizedTest" name="given_parameters_when_deleteUser_then_return_false[1]" time="0"/>
-  <testcase classname="UserRepositoryParameterizedTest" name="given_parameters_when_deleteUser_then_return_false[2]" time="0"/>
+  <testcase classname="UserRepositoryParameterizedTest" name="given_parameters_when_deleteUser_then_return_false[2]" time="0.002"/>
   <testcase classname="UserRepositoryParameterizedTest" name="given_parameters_when_deleteUser_then_return_false[3]" time="0.001"/>
 </testsuite>
