@@ -21,14 +21,10 @@ public class iUserRepositoryTest {
     public void given_an_user_and_name_changeTheUsername_then_return_true(){
 
         //Primero se crea un usuario
-        String usuario = "david";
-        String clave = "david1811";
-        User user = new User(usuario, clave);
+        User user = new User("david", "david1811");
         String newUsername = "Mittsaker";
-        boolean temp = true;
         iUserRepository usRep = Mockito.mock(iUserRepository.class);
-        Mockito.when(usRep.cambiarNombreDeUsuario(user, "Mittsaker")).thenReturn(temp);
-
+        Mockito.when(usRep.cambiarNombreDeUsuario(user, "Mittsaker")).thenReturn(true);
         assertTrue(usRep.cambiarNombreDeUsuario(user, newUsername));
     }
 
