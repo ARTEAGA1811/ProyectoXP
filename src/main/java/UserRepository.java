@@ -2,6 +2,7 @@ import sun.font.TrueTypeFont;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class UserRepository {
 
@@ -64,6 +65,19 @@ public class UserRepository {
         }else{
             System.out.println("Usuario eliminado");
             return true;
+        }
+
+    }
+
+    public boolean cambiarNombreUsuario(User user, String newName){
+
+        user.setUsername(newName);
+        if(user.getUsername().equals(newName)){
+            System.out.println("Nombre cambiado satisfactoriamente");
+            return true;
+        }else {
+            return false;
+
         }
     }
 

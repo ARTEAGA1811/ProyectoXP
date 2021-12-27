@@ -56,5 +56,9 @@ public class User{
         return this.username.equalsIgnoreCase(toCompare.getUsername())
                 && this.password.equalsIgnoreCase(toCompare.getPassword());
     }
+
+
 }
+
+
 
